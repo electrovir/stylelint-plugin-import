@@ -1,0 +1,35 @@
+{
+    "name": "stylelint-plugin-import",
+    "version": "1.0.0",
+    "description": "Stylelint plugin for managing imports.",
+    "main": "dist/index.js",
+    "scripts": {
+        "test": "rm -rf dist; tsc && jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/electrovir/stylelint-plugin-import.git"
+    },
+    "keywords": [],
+    "author": "electrovir (github.com/electrovir)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/electrovir/stylelint-plugin-import/issues"
+    },
+    "homepage": "https://github.com/electrovir/stylelint-plugin-import#readme",
+    "peerDependencies": {
+        "stylelint": "^13.0.0"
+    },
+    "devDependencies": {
+        "@types/jest": "^26.0.0",
+        "@types/stylelint": "^9.10.1",
+        "jest": "^26.0.1",
+        "postcss": "^7.0.32",
+        "prettier": "~2.0.5",
+        "stylelint": "^13.6.1",
+        "typescript": "^3.9.5"
+    },
+    "dependencies": {
+        "stylelint-rule-creator": "^4.0.6"
+    }
+}
