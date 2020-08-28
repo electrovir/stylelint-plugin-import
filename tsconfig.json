@@ -1,14 +1,15 @@
 {
     "compilerOptions": {
         "alwaysStrict": true,
+        "declaration": true,
         "forceConsistentCasingInFileNames": true,
         "module": "commonjs",
-        "target": "ES2018",
         "noImplicitAny": true,
         "noImplicitReturns": true,
         "noImplicitThis": true,
         "outDir": "dist",
         "rootDir": "src",
-        "strict": true
+        "strict": true,
+        "target": "ES2018"
     }
 }
