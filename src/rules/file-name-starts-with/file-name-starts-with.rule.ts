@@ -6,6 +6,7 @@ import {
     DefaultOptionMode,
     doesMatchLineExceptions,
 } from 'stylelint-rule-creator';
+import {extractImportPath} from '../../import-path';
 
 const messages = {
     shouldStartWith(importFileName: string, start: string) {
@@ -17,10 +18,10 @@ const messages = {
 };
 
 export type FileNameStartsWithRuleOptions = DefaultRuleOptions & {
-    startWith?: string;
+    startWith: string;
 };
 
-const defaultOptions = {
+const defaultOptions: FileNameStartsWithRuleOptions = {
     mode: DefaultOptionMode.REQUIRE,
     startWith: '_',
 };
@@ -40,12 +41,7 @@ export const fileNameStartsWithRule = createDefaultRule<
 
             const startWith = ruleOptions.startWith || defaultOptions.startWith;
 
-            const fileName = basename(
-                atRule.params
-                    .split(' ')
-                    .filter(param => param.match(/^['"]/))[0]
-                    .replace(/['"]/g, ''),
-            );
+            const fileName = basename(extractImportPath(atRule));
 
             if (ruleOptions.mode === DefaultOptionMode.REQUIRE && !fileName.startsWith(startWith)) {
                 report({

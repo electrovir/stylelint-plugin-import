@@ -12,7 +12,7 @@ testDefaultRule({
             accept: [
                 {
                     code: `
-                        @import (reference) "_colors";
+                        @import (reference) "${fileNameStartsWithRule.defaultOptions.startWith}colors";
 
                         a { color: pink; }
                     `,
@@ -20,7 +20,7 @@ testDefaultRule({
                 },
                 {
                     code: `
-                        @import (reference) "../../../_colors";
+                        @import (reference) "../../../${fileNameStartsWithRule.defaultOptions.startWith}colors";
                         a { color: pink; }
                     `,
                     description: 'accepts import with startWith and directories',
@@ -33,7 +33,10 @@ testDefaultRule({
                         a { color: pink; }
                     `,
                     description: 'blocks import without startWith',
-                    message: fileNameStartsWithRule.messages.shouldStartWith('colors', '_'),
+                    message: fileNameStartsWithRule.messages.shouldStartWith(
+                        'colors',
+                        fileNameStartsWithRule.defaultOptions.startWith,
+                    ),
                 },
                 {
                     code: `
@@ -41,7 +44,10 @@ testDefaultRule({
                         a { color: pink; }
                     `,
                     description: 'blocks import with directories and without startWith',
-                    message: fileNameStartsWithRule.messages.shouldStartWith('colors', '_'),
+                    message: fileNameStartsWithRule.messages.shouldStartWith(
+                        'colors',
+                        fileNameStartsWithRule.defaultOptions.startWith,
+                    ),
                 },
             ],
         },
