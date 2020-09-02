@@ -5,19 +5,19 @@ _autofixable_: yes
 -   By default, require that all imports include an extension.
 
     ```javascript
-    "file-extension": true // same as {"mode": "require"}
+    "plugin-import/file-extension": true // same as {"mode": "require"}
     ```
 
 -   Modes:
 
     ```javascript
-    "file-extension": {
+    "plugin-import/file-extension": {
         "mode": "require" /* require that all imports have a file extension */
     }
     ```
 
     ```javascript
-    "file-extension": {
+    "plugin-import/file-extension": {
         "mode": "block", /* prevent any imports from having a file extension */
     }
     ```
@@ -25,7 +25,7 @@ _autofixable_: yes
 -   Custom extension:
 
     ```javascript
-    "file-extension": {
+    "plugin-import/file-extension": {
         "mode": "require",
         "extension": ".less" /* autofix this extension into imports, the default is .css */
     }
@@ -36,7 +36,7 @@ _autofixable_: yes
 -   Defaults:
 
     ```javascript
-     "file-extension": true // same as {"mode": "require"}
+     "plugin-import/file-extension": true // same as {"mode": "require"}
     ```
 
     -   ![](https://placehold.it/15/008000/008000?text=+) **<span style="color: green;">Good</span>**
@@ -60,7 +60,7 @@ _autofixable_: yes
 -   Custom extension:
 
     ```javascript
-     "file-extension": {"mode": "require", "extension": ".less"}
+     "plugin-import/file-extension": {"mode": "require", "extension": ".less"}
     ```
 
     -   ![](https://placehold.it/15/008000/008000?text=+) **<span style="color: green;">Good</span>**
@@ -90,7 +90,7 @@ _autofixable_: yes
 -   `block` mode:
 
     ```javascript
-     "file-extension": {"mode": "block"}
+     "plugin-import/file-extension": {"mode": "block"}
     ```
 
     -   ![](https://placehold.it/15/008000/008000?text=+) **<span style="color: green;">Good</span>**

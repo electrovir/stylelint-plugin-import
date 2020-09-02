@@ -1,6 +1,6 @@
 {
     "name": "stylelint-plugin-import",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Stylelint plugin for managing imports.",
     "main": "dist/index.js",
     "scripts": {

@@ -64,7 +64,8 @@ All rules respect the following primary option format with _no_ secondary option
 
 Go to each rule's page (click on the name below) to see specific details.
 
-| Rule                                                     | auto-fix |
-| -------------------------------------------------------- | -------- |
-| [file-name-starts-with](src/rules/file-name-starts-with) |          |
-| [import-as-reference](src/rules/import-as-reference)     | &check;  |
+| Rule                                                                   | auto-fix |
+| ---------------------------------------------------------------------- | -------- |
+| [plugin-import/file-name-starts-with](src/rules/file-name-starts-with) |          |
+| [plugin-import/import-as-reference](src/rules/import-as-reference)     | &check;  |
+| [plugin-import/file-extension](src/rules/file-extension)               | &check;  |

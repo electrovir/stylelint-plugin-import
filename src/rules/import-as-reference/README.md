@@ -1,25 +1,25 @@
 # `import-as-reference`
 
-_autofixable_: true
+_autofixable_: yes
 
 This relates to the usage of `(reference)` in imports, [which is part of less language](http://lesscss.org/features/#import-atrules-feature-reference).
 
 -   By default, require that all imports include `(reference)`.
 
     ```javascript
-    "import-as-reference": true // same as {"mode": "require"}
+    "plugin-import/import-as-reference": true // same as {"mode": "require"}
     ```
 
 -   Modes:
 
     ```javascript
-    "import-as-reference": {
+    "plugin-import/import-as-reference": {
         "mode": "require" /* require that all imports use (reference) */
     }
     ```
 
     ```javascript
-    "import-as-reference": {
+    "plugin-import/import-as-reference": {
         "mode": "block", /* prevent any imports use (reference) */
     }
     ```
@@ -29,7 +29,7 @@ This relates to the usage of `(reference)` in imports, [which is part of less la
 -   Defaults:
 
     ```javascript
-     "import-as-reference": true // same as {"mode": "require"}
+     "plugin-import/import-as-reference": true // same as {"mode": "require"}
     ```
 
     -   ![](https://placehold.it/15/008000/008000?text=+) **<span style="color: green;">Good</span>**
@@ -53,7 +53,7 @@ This relates to the usage of `(reference)` in imports, [which is part of less la
 -   `block` mode:
 
     ```javascript
-     "import-as-reference": {"mode": "block"}
+     "plugin-import/import-as-reference": {"mode": "block"}
     ```
 
     -   ![](https://placehold.it/15/008000/008000?text=+) **<span style="color: green;">Good</span>**

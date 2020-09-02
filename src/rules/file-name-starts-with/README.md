@@ -1,24 +1,24 @@
 # `file-name-starts-with`
 
-_autofixable_: false (because autofixing this may result in imports for files that don't exist)
+_autofixable_: no (because autofixing this may result in imports from files that don't exist)
 
 -   By default, require that all imported files begin with `_`.
 
     ```javascript
-    "file-name-starts-with": true // same as {"mode": "require", "startWith": "_"}
+    "plugin-import/file-name-starts-with": true // same as {"mode": "require", "startWith": "_"}
     ```
 
 -   Customize `startWith` character:
 
     ```javascript
-    "file-name-starts-with": {
+    "plugin-import/file-name-starts-with": {
         "mode": "require",
         "startWith": "-" /* require that all imported files start with - */
     }
     ```
 
     ```javascript
-    "file-name-starts-with": {
+    "plugin-import/file-name-starts-with": {
         "mode": "block",
         "startWith": "(" /* block any imported files from starting with ( */
     }
@@ -29,7 +29,7 @@ _autofixable_: false (because autofixing this may result in imports for files th
 -   Defaults:
 
     ```javascript
-     "file-name-starts-with": true // same as {"mode": "require", "startWith": "_"}
+     "plugin-import/file-name-starts-with": true // same as {"mode": "require", "startWith": "_"}
     ```
 
     -   ![](https://placehold.it/15/008000/008000?text=+) **<span style="color: green;">Good</span>**
@@ -47,7 +47,7 @@ _autofixable_: false (because autofixing this may result in imports for files th
 -   `block` mode:
 
     ```javascript
-     "file-name-starts-with": {"mode": "block"}
+     "plugin-import/file-name-starts-with": {"mode": "block"}
     ```
 
     -   ![](https://placehold.it/15/008000/008000?text=+) **<span style="color: green;">Good</span>**
@@ -65,7 +65,7 @@ _autofixable_: false (because autofixing this may result in imports for files th
 -   Custom `startWith`:
 
     ```javascript
-     "file-name-starts-with": {"mode": "require", "startWith": "q"}
+     "plugin-import/file-name-starts-with": {"mode": "require", "startWith": "q"}
     ```
 
     -   ![](https://placehold.it/15/008000/008000?text=+) **<span style="color: green;">Good</span>**
