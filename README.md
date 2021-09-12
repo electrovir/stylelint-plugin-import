@@ -1,5 +1,7 @@
 # Stylelint Plugin Import
 
+[![tests](https://github.com/electrovir/stylelint-plugin-import/actions/workflows/virmator-tests.yml/badge.svg?branch=master)](https://github.com/electrovir/stylelint-plugin-import/actions/workflows/virmator-tests.yml)
+
 Stylelint plugin for managing imports.
 
 # Rule Options
