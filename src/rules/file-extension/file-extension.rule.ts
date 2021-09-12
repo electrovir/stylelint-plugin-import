@@ -1,12 +1,12 @@
-import {prefix} from '../../plugin-util';
 import {extname} from 'path';
 import {
     createDefaultRule,
     DefaultOptionMode,
-    doesMatchLineExceptions,
     DefaultRuleOptions,
+    doesMatchLineExceptions,
 } from 'stylelint-rule-creator';
 import {extractImportPath} from '../../import-path';
+import {prefix} from '../../plugin-util';
 
 const messages = {
     extensionRequired(line: string, extension: string) {
@@ -19,8 +19,8 @@ const messages = {
 
 export type FileExtensionRuleOptions = DefaultRuleOptions & {
     /**
-     * This is only use if the rule is required and an import is missing the extension.
-     * If "block" mode is used, then all extensions are removed, not just the one provided here.
+     * This is only use if the rule is required and an import is missing the extension. If "block"
+     * mode is used, then all extensions are removed, not just the one provided here.
      */
     extension: string;
 };
@@ -35,7 +35,7 @@ export const fileExtensionRule = createDefaultRule<typeof messages, FileExtensio
     messages,
     defaultOptions,
     ruleCallback: (report, messages, {ruleOptions, root, context, exceptionRegExps}) => {
-        root.walkAtRules('import', atRule => {
+        root.walkAtRules('import', (atRule) => {
             if (doesMatchLineExceptions(atRule, exceptionRegExps)) {
                 return;
             }

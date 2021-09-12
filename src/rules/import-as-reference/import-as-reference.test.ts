@@ -1,6 +1,6 @@
-import {importAsReferenceRule} from './import-as-reference.rule';
-import {testDefaultRule, DefaultOptionMode} from 'stylelint-rule-creator';
+import {DefaultOptionMode, testDefaultRule} from 'stylelint-rule-creator';
 import {pluginPath} from '../../plugin-util';
+import {importAsReferenceRule} from './import-as-reference.rule';
 
 testDefaultRule({
     rule: importAsReferenceRule,
@@ -13,9 +13,8 @@ testDefaultRule({
             reject: [
                 {
                     code: "@import 'fileNameHere';",
-                    message: importAsReferenceRule.messages.referenceRequired(
-                        "@import 'fileNameHere'",
-                    ),
+                    message:
+                        importAsReferenceRule.messages.referenceRequired("@import 'fileNameHere'"),
                 },
             ],
         },
@@ -28,9 +27,8 @@ testDefaultRule({
             reject: [
                 {
                     code: "@import 'fileNameHere';",
-                    message: importAsReferenceRule.messages.referenceRequired(
-                        "@import 'fileNameHere'",
-                    ),
+                    message:
+                        importAsReferenceRule.messages.referenceRequired("@import 'fileNameHere'"),
                 },
             ],
         },
@@ -63,9 +61,8 @@ testDefaultRule({
             reject: [
                 {
                     code: "@import 'fileNameHere';",
-                    message: importAsReferenceRule.messages.referenceRequired(
-                        "@import 'fileNameHere'",
-                    ),
+                    message:
+                        importAsReferenceRule.messages.referenceRequired("@import 'fileNameHere'"),
                     description: 'missing (reference) should get added',
                     fixed: "@import (reference) 'fileNameHere';",
                 },

@@ -1,9 +1,9 @@
-import {prefix} from '../../plugin-util';
 import {
     createDefaultRule,
     DefaultOptionMode,
     doesMatchLineExceptions,
 } from 'stylelint-rule-creator';
+import {prefix} from '../../plugin-util';
 
 const messages = {
     referenceRequired(line: string) {
@@ -23,7 +23,7 @@ export const importAsReferenceRule = createDefaultRule<typeof messages>({
         mode: DefaultOptionMode.REQUIRE,
     },
     ruleCallback: (report, messages, {ruleOptions, root, context, exceptionRegExps}) => {
-        root.walkAtRules('import', atRule => {
+        root.walkAtRules('import', (atRule) => {
             if (doesMatchLineExceptions(atRule, exceptionRegExps)) {
                 return;
             }

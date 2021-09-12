@@ -1,12 +1,12 @@
 import {basename} from 'path';
-import {prefix} from '../../plugin-util';
 import {
     createDefaultRule,
-    DefaultRuleOptions,
     DefaultOptionMode,
+    DefaultRuleOptions,
     doesMatchLineExceptions,
 } from 'stylelint-rule-creator';
 import {extractImportPath} from '../../import-path';
+import {prefix} from '../../plugin-util';
 
 const messages = {
     shouldStartWith(importFileName: string, start: string) {
@@ -34,7 +34,7 @@ export const fileNameStartsWithRule = createDefaultRule<
     messages,
     defaultOptions,
     ruleCallback: (report, messages, {ruleOptions, root, exceptionRegExps}) => {
-        root.walkAtRules('import', atRule => {
+        root.walkAtRules('import', (atRule) => {
             if (doesMatchLineExceptions(atRule, exceptionRegExps)) {
                 return;
             }

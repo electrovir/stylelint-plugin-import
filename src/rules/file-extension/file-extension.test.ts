@@ -1,4 +1,4 @@
-import {testDefaultRule, DefaultOptionMode} from 'stylelint-rule-creator';
+import {DefaultOptionMode, testDefaultRule} from 'stylelint-rule-creator';
 import {pluginPath} from '../../plugin-util';
 import {fileExtensionRule, FileExtensionRuleOptions} from './file-extension.rule';
 

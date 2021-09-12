@@ -1,6 +1,6 @@
-import {fileNameStartsWithRule} from './file-name-starts-with.rule';
-import {testDefaultRule, DefaultOptionMode} from 'stylelint-rule-creator';
+import {DefaultOptionMode, testDefaultRule} from 'stylelint-rule-creator';
 import {pluginPath} from '../../plugin-util';
+import {fileNameStartsWithRule} from './file-name-starts-with.rule';
 
 testDefaultRule({
     rule: fileNameStartsWithRule,

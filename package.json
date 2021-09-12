@@ -2,24 +2,24 @@
     "name": "stylelint-plugin-import",
     "version": "1.0.2",
     "description": "Stylelint plugin for managing imports.",
-    "main": "dist/index.js",
-    "scripts": {
-        "prepublishOnly": "rm -rf node_modules; npm install && npm run test",
-        "test": "rm -rf dist; tsc && jest"
+    "keywords": [],
+    "homepage": "https://github.com/electrovir/stylelint-plugin-import#readme",
+    "bugs": {
+        "url": "https://github.com/electrovir/stylelint-plugin-import/issues"
     },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/electrovir/stylelint-plugin-import.git"
     },
-    "keywords": [],
-    "author": "electrovir (github.com/electrovir)",
     "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/electrovir/stylelint-plugin-import/issues"
+    "author": "electrovir (github.com/electrovir)",
+    "main": "dist/index.js",
+    "scripts": {
+        "prepublishOnly": "rm -rf node_modules; npm install && npm run test",
+        "test": "virmator compile jest"
     },
-    "homepage": "https://github.com/electrovir/stylelint-plugin-import#readme",
-    "peerDependencies": {
-        "stylelint": "^13.13.1"
+    "dependencies": {
+        "stylelint-rule-creator": "^4.1.1"
     },
     "devDependencies": {
         "@types/jest": "^27.0.1",
@@ -29,7 +29,7 @@
         "stylelint": "^13.6.1",
         "virmator": "^1.1.10"
     },
-    "dependencies": {
-        "stylelint-rule-creator": "^4.1.1"
+    "peerDependencies": {
+        "stylelint": "^13.13.1"
     }
 }
