@@ -19,18 +19,17 @@
     },
     "homepage": "https://github.com/electrovir/stylelint-plugin-import#readme",
     "peerDependencies": {
-        "stylelint": "^13.0.0"
+        "stylelint": "^13.13.1"
     },
     "devDependencies": {
-        "@types/jest": "^26.0.0",
-        "@types/stylelint": "^9.10.1",
-        "jest": "^26.0.1",
-        "postcss": "^7.0.32",
-        "prettier": "~2.0.5",
+        "@types/jest": "^27.0.1",
+        "@types/stylelint": "^13.13.2",
+        "jest": "^27.1.1",
+        "postcss": "^8.3.6",
         "stylelint": "^13.6.1",
-        "typescript": "^3.9.5"
+        "virmator": "^1.1.10"
     },
     "dependencies": {
-        "stylelint-rule-creator": "^4.0.7"
+        "stylelint-rule-creator": "^4.1.1"
     }
 }
