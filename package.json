@@ -2,7 +2,20 @@
     "name": "stylelint-plugin-import",
     "version": "1.0.2",
     "description": "Stylelint plugin for managing imports.",
-    "keywords": [],
+    "keywords": [
+        "css",
+        "less",
+        "scss",
+        "sass",
+        "import",
+        "stylelint",
+        "file",
+        "name",
+        "file name",
+        "reference",
+        "extension",
+        "file extension"
+    ],
     "homepage": "https://github.com/electrovir/stylelint-plugin-import#readme",
     "bugs": {
         "url": "https://github.com/electrovir/stylelint-plugin-import/issues"
@@ -12,11 +25,17 @@
         "url": "git+https://github.com/electrovir/stylelint-plugin-import.git"
     },
     "license": "MIT",
-    "author": "electrovir (github.com/electrovir)",
+    "author": {
+        "name": "electrovir",
+        "url": "https://github.com/electrovir"
+    },
     "main": "dist/index.js",
     "scripts": {
-        "prepublishOnly": "rm -rf node_modules; npm install && npm run test",
-        "test": "virmator compile jest"
+        "prepublishOnly": "npm run test:full",
+        "spellcheck": "virmator spellcheck --extendable-config",
+        "test": "virmator compile && jest",
+        "test:full": "npm test && npm run spellcheck && virmator format check",
+        "format": "virmator format write"
     },
     "dependencies": {
         "stylelint-rule-creator": "^4.1.1"
@@ -26,7 +45,7 @@
         "@types/stylelint": "^13.13.2",
         "jest": "^27.1.1",
         "postcss": "^8.3.6",
-        "stylelint": "^13.6.1",
+        "stylelint": "^13.13.1",
         "virmator": "^1.1.10"
     },
     "peerDependencies": {

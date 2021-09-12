@@ -71,7 +71,7 @@ _autofixable_: no (because autofixing this may result in imports from files that
     -   ![](https://placehold.it/15/008000/008000?text=+) **<span style="color: green;">Good</span>**
 
         ```less
-        @import 'qcolors';
+        @import 'q-colors';
         ```
 
     -   ![](https://placehold.it/15/FF0000/FF0000?text=+) **<span style="color: red;">Bad</span>**
