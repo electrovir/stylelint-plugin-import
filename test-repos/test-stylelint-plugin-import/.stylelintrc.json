@@ -1,0 +1,16 @@
+{
+    "plugins": ["stylelint-plugin-import"],
+    "rules": {
+        "plugin-import/file-extension": {
+            "extension": ".less",
+            "mode": "require"
+        },
+        "plugin-import/file-name-starts-with": {
+            "mode": "require",
+            "startWith": "-"
+        },
+        "plugin-import/import-as-reference": {
+            "mode": "require"
+        }
+    }
+}
