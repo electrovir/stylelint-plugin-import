@@ -1,6 +1,6 @@
 {
     "name": "stylelint-plugin-import",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Stylelint plugin for managing imports.",
     "keywords": [
         "css",
@@ -31,22 +31,23 @@
     },
     "main": "dist/index.js",
     "scripts": {
+        "format": "virmator format write",
         "prepublishOnly": "npm run test:full",
         "spellcheck": "virmator spellcheck --extendable-config",
         "test": "virmator compile && jest",
-        "test:full": "npm test && npm run spellcheck && virmator format check",
-        "format": "virmator format write"
+        "test:full": "npm test && npm run spellcheck && virmator format check"
     },
     "dependencies": {
-        "stylelint-rule-creator": "^4.1.5"
+        "stylelint-rule-creator": "^4.1.7"
     },
     "devDependencies": {
-        "@types/jest": "^27.0.1",
+        "@types/jest": "^27.0.2",
         "@types/stylelint": "^13.13.2",
-        "jest": "^27.2.0",
-        "postcss": "^8.3.6",
+        "jest": "^27.2.4",
+        "postcss": "^8.3.9",
         "stylelint": "^13.13.1",
-        "virmator": "^1.1.15"
+        "stylelint-jest-rule-tester": "^2.1.5",
+        "virmator": "^1.2.0"
     },
     "peerDependencies": {
         "stylelint": "^13.13.1"
