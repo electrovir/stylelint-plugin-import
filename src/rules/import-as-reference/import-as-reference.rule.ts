@@ -14,7 +14,7 @@ const messages = {
     },
 };
 
-const paramReferenceCheckString = '(reference) ';
+const paramReferenceCheckString = '(reference)';
 
 export const importAsReferenceRule = createDefaultRule<typeof messages>({
     ruleName: `${prefix}/import-as-reference`,
@@ -33,7 +33,11 @@ export const importAsReferenceRule = createDefaultRule<typeof messages>({
             if (ruleOptions.mode === DefaultOptionMode.REQUIRE && !hasReference) {
                 if (context.fix) {
                     const newNode = atRule.clone();
-                    newNode.params = paramReferenceCheckString + newNode.params;
+                    newNode.params =
+                        paramReferenceCheckString +
+                        (newNode.raws.afterName ?? ' ') +
+                        newNode.params;
+                    newNode.raws.afterName = ' ';
                     atRule.replaceWith(newNode);
                 } else {
                     report({
@@ -45,7 +49,7 @@ export const importAsReferenceRule = createDefaultRule<typeof messages>({
             } else if (ruleOptions.mode === DefaultOptionMode.BLOCK && hasReference) {
                 if (context.fix) {
                     const newNode = atRule.clone();
-                    newNode.params = newNode.params.replace(paramReferenceCheckString, '');
+                    newNode.params = newNode.params.replace(/\(reference\) ?/, '');
                     atRule.replaceWith(newNode);
                 } else {
                     report({

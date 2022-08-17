@@ -21,6 +21,7 @@ testDefaultRule({
         },
         {
             ruleOptions: true,
+            fix: true,
             description: 'should work on multiple lines',
             accept: [
                 {
@@ -31,9 +32,11 @@ testDefaultRule({
             reject: [
                 {
                     code: `@import
-    'fileNameHere';`,
+                        'fileNameHere';`,
                     message: importAsReferenceRule.messages.referenceRequired(`@import
-    'fileNameHere'`),
+                        'fileNameHere'`),
+                    fixed: `@import (reference)
+                        'fileNameHere';`,
                 },
             ],
         },
