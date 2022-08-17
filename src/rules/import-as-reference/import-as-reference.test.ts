@@ -20,6 +20,24 @@ testDefaultRule({
             ],
         },
         {
+            ruleOptions: true,
+            description: 'should work on multiple lines',
+            accept: [
+                {
+                    code: `@import (reference)
+    'fileNameHere';`,
+                },
+            ],
+            reject: [
+                {
+                    code: `@import
+    'fileNameHere';`,
+                    message: importAsReferenceRule.messages.referenceRequired(`@import
+    'fileNameHere'`),
+                },
+            ],
+        },
+        {
             ruleOptions: {
                 mode: DefaultOptionMode.REQUIRE,
             },
