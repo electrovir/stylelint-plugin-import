@@ -1,6 +1,6 @@
 {
     "name": "stylelint-plugin-import",
-    "version": "1.0.12",
+    "version": "1.0.13",
     "description": "Stylelint plugin for managing imports.",
     "keywords": [
         "css",

@@ -46,7 +46,7 @@ export const fileExtensionRule = createDefaultRule<typeof messages, FileExtensio
             if (ruleOptions.mode === DefaultOptionMode.REQUIRE && !currentExtension) {
                 if (context.fix) {
                     const newNode = atRule.clone();
-                    newNode.params = newNode.params.replace(/(['"])$/, optionsExtension + '$1');
+                    newNode.params = newNode.params.replace(/(['"]\)?)$/, optionsExtension + '$1');
                     atRule.replaceWith(newNode);
                 } else {
                     report({
@@ -59,7 +59,7 @@ export const fileExtensionRule = createDefaultRule<typeof messages, FileExtensio
                 if (context.fix) {
                     const newNode = atRule.clone();
                     newNode.params = newNode.params.replace(
-                        new RegExp(currentExtension.replace('.', '\\.') + `(.*['"])$`),
+                        new RegExp(currentExtension.replace('.', '\\.') + `(.*['"]\\)?)$`),
                         '$1',
                     );
                     atRule.replaceWith(newNode);

@@ -8,6 +8,51 @@ testDefaultRule({
     pluginPath: pluginPath,
     tests: [
         {
+            ruleOptions: {
+                mode: DefaultOptionMode.REQUIRE,
+                extension: '.css',
+            },
+            fix: true,
+            description: 'with url function and required .css',
+            accept: [
+                {
+                    code: '@import url("some-path.css");',
+                },
+            ],
+            reject: [
+                {
+                    code: '@import url("some-path");',
+                    message: fileExtensionRule.messages.extensionRequired(
+                        '@import url("some-path")',
+                        fileExtensionRule.defaultOptions.extension,
+                    ),
+                    fixed: '@import url("some-path.css");',
+                },
+            ],
+        },
+        {
+            ruleOptions: {
+                mode: DefaultOptionMode.BLOCK,
+                extension: '',
+            },
+            fix: true,
+            description: 'with url function and blocked .css',
+            accept: [
+                {
+                    code: '@import url("some-path");',
+                },
+            ],
+            reject: [
+                {
+                    code: '@import url("some-path.css");',
+                    message: fileExtensionRule.messages.extensionBlocked(
+                        '@import url("some-path.css")',
+                    ),
+                    fixed: '@import url("some-path");',
+                },
+            ],
+        },
+        {
             ruleOptions: true,
             fix: true,
             description: 'defaults work as expected',
