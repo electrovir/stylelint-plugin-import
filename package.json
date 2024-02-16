@@ -38,19 +38,19 @@
         "test:full": "npm test && npm run spellcheck && virmator format check"
     },
     "dependencies": {
-        "stylelint-rule-creator": "5.1.0"
+        "stylelint-rule-creator": "^5.1.0"
     },
     "devDependencies": {
-        "@types/jest": "28.1.8",
-        "@types/stylelint": "13.13.3",
-        "jest": "29.0.1",
-        "postcss": "8.4.16",
-        "postcss-less": "6.0.0",
-        "stylelint": "14.11.0",
-        "stylelint-jest-rule-tester": "2.1.7",
-        "virmator": "1.4.6"
+        "@types/jest": "^29.5.12",
+        "@types/stylelint": "^14.0.0",
+        "jest": "^29.7.0",
+        "postcss": "^8.4.35",
+        "postcss-less": "^6.0.0",
+        "stylelint": "^15.11.0",
+        "stylelint-jest-rule-tester": "^2.1.7",
+        "virmator": "^11.3.2"
     },
     "optionalDependencies": {
-        "fsevents": "2.3.2"
+        "fsevents": "^2.3.3"
     }
 }
