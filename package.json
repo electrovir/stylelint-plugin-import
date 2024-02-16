@@ -52,5 +52,8 @@
     },
     "optionalDependencies": {
         "fsevents": "2.3.2"
+    },
+    "peerDependencies": {
+        "stylelint": "<16.0.0"
     }
 }
